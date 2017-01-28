@@ -55,6 +55,14 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Unable to handle request'
     })
 });
+
+app.get('/projects',(req,res)=>{
+   res.render('portfolio.hbs',{
+       pageTitle: 'Portfolio page',
+       pageContent: 'Portfolio details placeholder '
+   })
+});
+
 app.listen(port, () => {
     console.log(`Express listening to port ${port}`);
 });
